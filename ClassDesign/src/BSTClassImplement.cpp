@@ -11,7 +11,7 @@ int main(){
     vector<int> nodes(Tree->preOrderTraversal());
   	
  //Print Preorder (Ascending in BST)
-/*    for(auto i : nodes){
+    for(auto i : nodes){
         cout << i <<", ";
     }
     cout<<endl;
@@ -25,7 +25,7 @@ int main(){
     for(auto i : newnodes){
         cout << i <<", ";
     }
-    cout<<endl;*/
+    cout<<endl;
     
     return 0;
 }
