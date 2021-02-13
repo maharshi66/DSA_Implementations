@@ -13,18 +13,7 @@ struct TreeNode{
 };
 
 class BinarySearchTree{
-	private:
-    TreeNode* insertNode(TreeNode* root, int val){
-        TreeNode* node = new TreeNode(val);
-        if(root == nullptr) return node;    
-        if(root->val > val)
-        {
-            root->left = insertNode(val); 
-        }else if(root->val < val){
-            root->right = insertNode(val);
-        }
-        return root;
-    }    
+	private:    
     void helper(TreeNode* root, vector<int>& result)
     {
         if(root != nullptr)
@@ -44,21 +33,39 @@ class BinarySearchTree{
     }
 
 	public:
-	TreeNode* root;	
-    BinarySearchTree() {} 	
-	BinarySearchTree(int val){
-		root = new TreeNode(val);
-	}
-
-	//BST common operations
-    void insert(int key)
+    TreeNode* root;
+    BinarySearchTree(int val)
     {
-        root = insertNode(this->root, key);
+        root = new TreeNode(val);
     }
 
+    //BST Insert, Search, Delete
+    TreeNode* insertNode(TreeNode* node, int val){
+        
+        if(node == nullptr){
+            node = new TreeNode(val);
+            return node;
+        }
+
+        if(node->val > val){
+            node->left = insertNode(node->left, val);
+        }else if(node->val < val){
+            node->right = insertNode(node->right, val);
+        }
+
+        return node;
+    }
+
+    TreeNode* insert(int key){
+        root = insertNode(this->root, key);
+        return root;
+    } 	
+    
+    BinarySearchTree() {} 	
+	
 	void deleteNode(int val);
 	bool searchNode(int val);
-    vector<int> inorderTraversal() {
+    vector<int> preOrderTraversal() {
         vector<int> resultVector;
         helper(this->root, resultVector);
         return resultVector;               
