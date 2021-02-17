@@ -16,19 +16,6 @@ class DoublyLinkedList{
 
 	public:
 	DoublyLinkedList(): head(nullptr), tail(nullptr) {}
-	
-	void addAtHead(int val){
-		DoublyLinkedNode* newNode = new DoublyLinkedNode();
-		newNode->val = val;
-		if(!head){
-			head = newNode;
-			tail = newNode;
-			return;
-		}
-		newNode->next = head;
-		head = newNode;
-		return;
-	}
 
 	int getAtIndex(int index){
 		if(index > getLength(head) || index < 0){
@@ -56,6 +43,19 @@ class DoublyLinkedList{
 		}
 		head = temp;
 		return count;
+	}
+
+	void addAtHead(int val){
+		DoublyLinkedNode* newNode = new DoublyLinkedNode();
+		newNode->val = val;
+		if(!head){
+			head = newNode;
+			tail = newNode;
+			return;
+		}
+		newNode->next = head;
+		head = newNode;
+		return;
 	}
 
 	void addAtTail(int val){
@@ -99,46 +99,48 @@ class DoublyLinkedList{
 	}
 
 	void deleteAtHead(){
-		if(!head){
-			return;
-		}
-
-		DoublyLinkedNode* temp = head;
-		head = head->next;
-		delete temp;
-		return;
+        if(!head){
+            return;
+        }
+        DoublyLinkedNode* temp = head;
+        head = head->next;
+        delete temp;
 	}
 
 	void deleteAtTail(){
-		if(!head){
-			return;
-		}
-
-		DoublyLinkedNode* temp = tail->prev;
-		temp->next = nullptr;
-		delete tail;
-		tail = temp; 
-		return;
+        if(!head){
+            return ;
+        }
+        DoublyLinkedNode* temp = head;
+        while(temp->next->next != nullptr){
+            temp = temp->next;
+        }
+        temp->next = nullptr;
+        delete tail;
+        tail = temp;
 	}
 
 	void deleteAtIndex(int index){
-		if(index == 0){
-			deleteAtHead();
-			return;
-		}else if( index == getLength(head)){
-			deleteAtTail();
-			return;
-		}
-
-		DoublyLinkedNode* temp = head;
-		int idx = 0;
-		while(idx != index - 1){
-			temp = temp->next;
-			idx++;
-		}
-		DoublyLinkedNode* temp2 = temp;
-		temp->next = temp->next->next;
-		delete temp2;
+        if(index >= getLength(head)){
+            return;
+        }
+        if(index == 0){
+            deleteAtHead();
+            return;
+        }
+        if(index == getLength(head)-1){
+            deleteAtTail();
+            return ;
+        }
+        int i=0;
+        DoublyLinkedNode* temp = head;
+        while(i < index-1){
+            temp = temp->next;
+            i++;
+        }
+        DoublyLinkedNode* temp2 = temp->next;
+        temp->next = temp->next->next;
+        delete temp2;
 	}
 
 	void print(){

@@ -149,15 +149,41 @@ class SinglyLinkedList{
         delete temp2;
     }
 
-    void print(){
+   	SinglyLinkedNode* reverseList(){
+      // Iterative approach  
+   	  SinglyLinkedNode *prevNode, *currNode, *nextNode;
+      if (head == nullptr || head->next == nullptr) 
+      {
+        return head;
+      }
+
+      prevNode = nullptr;
+      currNode = head;
+        
+      while(currNode != nullptr)
+      {
+          nextNode = currNode->next;
+          currNode->next = prevNode;
+          prevNode = currNode;
+          currNode = nextNode;
+      }
+        
+        head = prevNode;
+        this->printList();
+        return head;
+   	}
+
+    void printList(){
         if(head == nullptr){
             return;
         }
         SinglyLinkedNode* temp = head;
         while(temp!=nullptr){
-            cout<<temp->val<<" ";
+            cout<<temp->val<<"->";
             temp = temp->next;
         }
         cout<<endl;
     }
+
+
 };
