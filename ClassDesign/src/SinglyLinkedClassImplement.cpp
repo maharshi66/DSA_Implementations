@@ -13,9 +13,10 @@ int main(){
  	obj->addAtIndex(5,21);
  	obj->addAtIndex(6,17);
  	obj->addAtIndex(7,666);
- 	obj->printList();
+ 	printList(obj);
  	cout<<endl<<"========REVERSING========"<<endl;
  	obj->reverseList();
+ 	printList(obj);
  	
  	cout<<endl<<"========ROTATING========"<<endl;
  	SinglyLinkedList* obj_2 = new SinglyLinkedList();
@@ -25,6 +26,12 @@ int main(){
  	obj_2->addAtIndex(3,4);
  	obj_2->addAtIndex(4,5);
  	obj_2->rotateList(17);
- 	obj_2->printList();
+ 	printList(obj_2);
+
+ 	cout<<endl<<"========DEEP COPY========"<<endl;
+ 	SinglyLinkedNode* list = obj_2->copyList();
+ 	SinglyLinkedList* newList = new SinglyLinkedList();
+ 	newList->head = list;
+ 	printList(newList);
 	return 0;
 }
