@@ -5,14 +5,14 @@ struct SinglyLinkedNode{
 	int val;
 	SinglyLinkedNode *next;
 	SinglyLinkedNode() : val(0), next(nullptr) {}
+	SinglyLinkedNode(int val) : val(val), next(nullptr) {}
 };
 
-class SinglyLinkedList{
-	private:
+class SinglyLinkedList{		
+	public:
 	SinglyLinkedNode *head;
 	SinglyLinkedNode *tail;
-		
-	public:
+
 	SinglyLinkedList(): head(nullptr), tail(nullptr) {}
 	
 	int getLength(SinglyLinkedNode* head){
@@ -43,8 +43,7 @@ class SinglyLinkedList{
 	}
 
 	void addAtTail(int val){
-		SinglyLinkedNode* newNode = new SinglyLinkedNode();
-		newNode->val = val;
+		SinglyLinkedNode* newNode = new SinglyLinkedNode(val);
 		if(!head){
 			head = newNode;
 			tail = newNode;
@@ -52,7 +51,8 @@ class SinglyLinkedList{
 		}
 
 		tail->next = newNode;
-		tail = newNode;
+		tail = tail->next;
+		tail->next = nullptr;
 		return;
 	}
 
@@ -169,21 +169,68 @@ class SinglyLinkedList{
       }
         
         head = prevNode;
-        this->printList();
         return head;
    	}
 
-    void printList(){
-        if(head == nullptr){
+   	void rotateList(int k){
+		if(!head || k == 0){
+			return;
+		}
+		SinglyLinkedNode* curr = head;
+		int length, lastNode;
+		
+		//Get to the last node
+		while(curr->next != nullptr){
+			curr = curr->next;
+		}
+
+		length = getLength(head)  + 1; 
+		k = k % length; //Optimization for when k is greater than length
+		lastNode = length - k;
+
+		//Make it circular by connecting last node to first node
+		curr->next = head;
+		while(lastNode--){
+			curr = curr->next;	
+		} 
+		head = curr->next;
+		curr->next = nullptr;
+		return;
+   	} 
+
+   	//Deep Copy of a Linked List
+   	SinglyLinkedNode* copyList(){
+   		if(head == nullptr) return nullptr;
+   		SinglyLinkedNode* curr = head;
+   		SinglyLinkedNode* newList = nullptr;
+   		SinglyLinkedNode* tail = nullptr;
+
+   		while(curr !=  nullptr){
+   			if(newList == nullptr){
+   				newList = new SinglyLinkedNode(curr->val);
+   				tail = newList;
+   			}
+   			else
+   			{
+   				tail->next = new SinglyLinkedNode(curr->val);
+   				tail = tail->next;
+   				tail->next = nullptr;
+   			}
+   			curr = curr->next;
+   		}
+
+   		return newList;
+   	}
+};
+
+void printList(SinglyLinkedList* list){
+        if(list->head == nullptr){
             return;
         }
-        SinglyLinkedNode* temp = head;
+        SinglyLinkedNode* temp = list->head;
         while(temp!=nullptr){
             cout<<temp->val<<"->";
             temp = temp->next;
         }
         cout<<endl;
-    }
-
-
-};
+}
