@@ -1,0 +1,10 @@
+digraph "BinarySearchTree"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{BinarySearchTree\n||+ BinarySearchTree()\l+ BinarySearchTree()\l+ insertKey()\l+ searchKey()\l+ deleteKey()\l+ preOrderTraversal()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This class describes a binary search tree."];
+  Node2 -> Node1 [color="grey25",fontsize="10",style="solid",label=" +root" ,arrowhead="odiamond",fontname="Helvetica"];
+  Node2 [label="{TreeNode\n|+ val\l|+ TreeNode()\l+ TreeNode()\l+ TreeNode()\l}",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$structTreeNode.html",tooltip="Binary Tree Node."];
+  Node2 -> Node2 [color="grey25",fontsize="10",style="solid",label=" +right\n+left" ,arrowhead="odiamond",fontname="Helvetica"];
+}

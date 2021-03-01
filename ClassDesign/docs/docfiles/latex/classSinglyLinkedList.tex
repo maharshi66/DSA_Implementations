@@ -1,0 +1,202 @@
+\hypertarget{classSinglyLinkedList}{}\doxysection{Singly\+Linked\+List Class Reference}
+\label{classSinglyLinkedList}\index{SinglyLinkedList@{SinglyLinkedList}}
+
+
+This class describes a singly linked list .  
+
+
+
+
+{\ttfamily \#include $<$Singly\+Linked\+Class\+Design.\+h$>$}
+
+
+
+Collaboration diagram for Singly\+Linked\+List\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSinglyLinkedList_a4f399b2303c5d13fbe9ac9d211a61d5e}\label{classSinglyLinkedList_a4f399b2303c5d13fbe9ac9d211a61d5e}} 
+\mbox{\hyperlink{classSinglyLinkedList_a4f399b2303c5d13fbe9ac9d211a61d5e}{Singly\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classSinglyLinkedList_a69c77fc8917ea5644a93d8021123021a}{get\+Length}} (\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$head)
+\begin{DoxyCompactList}\small\item\em Gets the length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSinglyLinkedList_aa5ba01295d431e35e600e70344c4d4a4}{add\+At\+Head}} (int val)
+\begin{DoxyCompactList}\small\item\em Adds an at head. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSinglyLinkedList_aef00d63775d5cd00c20f34ec8898e2ea}{add\+At\+Tail}} (int val)
+\begin{DoxyCompactList}\small\item\em Adds an at tail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSinglyLinkedList_a2c54f88cd999f66ce4337f53d258730d}{add\+At\+Index}} (int index, int val)
+\begin{DoxyCompactList}\small\item\em Adds an at index. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$ \mbox{\hyperlink{classSinglyLinkedList_abbb46514f121ed014b615a49579fd1f8}{get\+Node\+At\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the node at index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSinglyLinkedList_ad5b8148dfd8b91cd92ee979a39d2f2f8}\label{classSinglyLinkedList_ad5b8148dfd8b91cd92ee979a39d2f2f8}} 
+void \mbox{\hyperlink{classSinglyLinkedList_ad5b8148dfd8b91cd92ee979a39d2f2f8}{delete\+At\+Head}} ()
+\begin{DoxyCompactList}\small\item\em \{ function\+\_\+description \} \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classSinglyLinkedList_a888e0c660317db3889a7d284805fc757}\label{classSinglyLinkedList_a888e0c660317db3889a7d284805fc757}} 
+void \mbox{\hyperlink{classSinglyLinkedList_a888e0c660317db3889a7d284805fc757}{delete\+At\+Tail}} ()
+\begin{DoxyCompactList}\small\item\em \{ function\+\_\+description \} \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSinglyLinkedList_a6bf2cfff5b2524b00973512404473f78}{delete\+At\+Index}} (int index)
+\item 
+\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$ \mbox{\hyperlink{classSinglyLinkedList_aeead12b6ceb960e2120219ecfdc3543b}{reverse\+List}} ()
+\begin{DoxyCompactList}\small\item\em Reverses the linked list. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classSinglyLinkedList_a47e4cd6ea9a6b273edb90862270c95e0}{rotate\+List}} (int k)
+\begin{DoxyCompactList}\small\item\em Rotates the Linked List. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$ \mbox{\hyperlink{classSinglyLinkedList_ae4e7ba3507cb59e373d25398233d6e4a}{copy\+List}} ()
+\begin{DoxyCompactList}\small\item\em Makes a Deep Copy of the linked list. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classSinglyLinkedList_a2f10f8639b1e286054d24f9ffee20653}\label{classSinglyLinkedList_a2f10f8639b1e286054d24f9ffee20653}} 
+\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$ {\bfseries head}
+\item 
+\mbox{\Hypertarget{classSinglyLinkedList_a26b91e45f7fac009f607e318e0df1277}\label{classSinglyLinkedList_a26b91e45f7fac009f607e318e0df1277}} 
+\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$ {\bfseries tail}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class describes a singly linked list . 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classSinglyLinkedList_aa5ba01295d431e35e600e70344c4d4a4}\label{classSinglyLinkedList_aa5ba01295d431e35e600e70344c4d4a4}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!addAtHead@{addAtHead}}
+\index{addAtHead@{addAtHead}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtHead()}{addAtHead()}}
+{\footnotesize\ttfamily void Singly\+Linked\+List\+::add\+At\+Head (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an at head. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSinglyLinkedList_a2c54f88cd999f66ce4337f53d258730d}\label{classSinglyLinkedList_a2c54f88cd999f66ce4337f53d258730d}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!addAtIndex@{addAtIndex}}
+\index{addAtIndex@{addAtIndex}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtIndex()}{addAtIndex()}}
+{\footnotesize\ttfamily void Singly\+Linked\+List\+::add\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an at index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The index \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSinglyLinkedList_aef00d63775d5cd00c20f34ec8898e2ea}\label{classSinglyLinkedList_aef00d63775d5cd00c20f34ec8898e2ea}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!addAtTail@{addAtTail}}
+\index{addAtTail@{addAtTail}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtTail()}{addAtTail()}}
+{\footnotesize\ttfamily void Singly\+Linked\+List\+::add\+At\+Tail (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an at tail. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSinglyLinkedList_ae4e7ba3507cb59e373d25398233d6e4a}\label{classSinglyLinkedList_ae4e7ba3507cb59e373d25398233d6e4a}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!copyList@{copyList}}
+\index{copyList@{copyList}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{copyList()}{copyList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}}$\ast$ Singly\+Linked\+List\+::copy\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Makes a Deep Copy of the linked list. 
+
+\begin{DoxyReturn}{Returns}
+Copied List 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSinglyLinkedList_a6bf2cfff5b2524b00973512404473f78}\label{classSinglyLinkedList_a6bf2cfff5b2524b00973512404473f78}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!deleteAtIndex@{deleteAtIndex}}
+\index{deleteAtIndex@{deleteAtIndex}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{deleteAtIndex()}{deleteAtIndex()}}
+{\footnotesize\ttfamily void Singly\+Linked\+List\+::delete\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+Delete the index-\/th node in the linked list, if the index is valid.
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classSinglyLinkedList_a69c77fc8917ea5644a93d8021123021a}\label{classSinglyLinkedList_a69c77fc8917ea5644a93d8021123021a}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!getLength@{getLength}}
+\index{getLength@{getLength}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily int Singly\+Linked\+List\+::get\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}} $\ast$}]{head }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & The head\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSinglyLinkedList_abbb46514f121ed014b615a49579fd1f8}\label{classSinglyLinkedList_abbb46514f121ed014b615a49579fd1f8}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!getNodeAtIndex@{getNodeAtIndex}}
+\index{getNodeAtIndex@{getNodeAtIndex}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{getNodeAtIndex()}{getNodeAtIndex()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}}$\ast$ Singly\+Linked\+List\+::get\+Node\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the node at index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The node at index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSinglyLinkedList_aeead12b6ceb960e2120219ecfdc3543b}\label{classSinglyLinkedList_aeead12b6ceb960e2120219ecfdc3543b}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!reverseList@{reverseList}}
+\index{reverseList@{reverseList}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{reverseList()}{reverseList()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structSinglyLinkedNode}{Singly\+Linked\+Node}}$\ast$ Singly\+Linked\+List\+::reverse\+List (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Reverses the linked list. 
+
+\begin{DoxyReturn}{Returns}
+Reversed List 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classSinglyLinkedList_a47e4cd6ea9a6b273edb90862270c95e0}\label{classSinglyLinkedList_a47e4cd6ea9a6b273edb90862270c95e0}} 
+\index{SinglyLinkedList@{SinglyLinkedList}!rotateList@{rotateList}}
+\index{rotateList@{rotateList}!SinglyLinkedList@{SinglyLinkedList}}
+\doxysubsubsection{\texorpdfstring{rotateList()}{rotateList()}}
+{\footnotesize\ttfamily void Singly\+Linked\+List\+::rotate\+List (\begin{DoxyParamCaption}\item[{int}]{k }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotates the Linked List. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em k} & number of rotations \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maharshi/\+Projects/\+D\+S\+A\+\_\+\+Implementations/\+Class\+Design/headers/Singly\+Linked\+Class\+Design.\+h\end{DoxyCompactItemize}

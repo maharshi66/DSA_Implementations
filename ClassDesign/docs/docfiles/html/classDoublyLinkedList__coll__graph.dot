@@ -1,0 +1,7 @@
+digraph "DoublyLinkedList"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="{DoublyLinkedList\n||+ DoublyLinkedList()\l+ getAtIndex()\l+ getLength()\l+ addAtHead()\l+ addAtTail()\l+ addAtIndex()\l+ deleteAtHead()\l+ deleteAtTail()\l+ deleteAtIndex()\l+ print()\l}",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="This class describes a doubly linked list."];
+}
