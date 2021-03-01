@@ -1,0 +1,151 @@
+\hypertarget{classDoublyLinkedList}{}\doxysection{Doubly\+Linked\+List Class Reference}
+\label{classDoublyLinkedList}\index{DoublyLinkedList@{DoublyLinkedList}}
+
+
+This class describes a doubly linked list.  
+
+
+
+
+{\ttfamily \#include $<$Doubly\+Linked\+Class\+Design.\+h$>$}
+
+
+
+Collaboration diagram for Doubly\+Linked\+List\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classDoublyLinkedList_a64b759ca82ca4b7767f42ba5691575f5}\label{classDoublyLinkedList_a64b759ca82ca4b7767f42ba5691575f5}} 
+\mbox{\hyperlink{classDoublyLinkedList_a64b759ca82ca4b7767f42ba5691575f5}{Doubly\+Linked\+List}} ()
+\begin{DoxyCompactList}\small\item\em Constructs a new instance. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDoublyLinkedList_a0a87d56752b51f03cf8cec32ede03423}{get\+At\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Gets the at index. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classDoublyLinkedList_ad27208b2c0b53c87dfff7e631a14fb20}{get\+Length}} (\mbox{\hyperlink{structDoublyLinkedNode}{Doubly\+Linked\+Node}} $\ast$head)
+\begin{DoxyCompactList}\small\item\em Gets the length. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_ad753f7e35cc2c498fed8324f6c518599}{add\+At\+Head}} (int val)
+\begin{DoxyCompactList}\small\item\em Adds an at head. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a19d3b6c861faebef7c018043abcb6bb9}{add\+At\+Tail}} (int val)
+\begin{DoxyCompactList}\small\item\em Adds an at tail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_ab870df73df56d162e4fe8b11af453928}{add\+At\+Index}} (int index, int val)
+\begin{DoxyCompactList}\small\item\em Adds an at index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoublyLinkedList_a076c376fb5fe9129660ec4fa5d2c87ef}\label{classDoublyLinkedList_a076c376fb5fe9129660ec4fa5d2c87ef}} 
+void \mbox{\hyperlink{classDoublyLinkedList_a076c376fb5fe9129660ec4fa5d2c87ef}{delete\+At\+Head}} ()
+\begin{DoxyCompactList}\small\item\em Deletes node at head. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoublyLinkedList_a4e672b5e19525d146712e120814f36bd}\label{classDoublyLinkedList_a4e672b5e19525d146712e120814f36bd}} 
+void \mbox{\hyperlink{classDoublyLinkedList_a4e672b5e19525d146712e120814f36bd}{delete\+At\+Tail}} ()
+\begin{DoxyCompactList}\small\item\em Deletes node at tail. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classDoublyLinkedList_a41d0d15177dce31b6f77bbe243676558}{delete\+At\+Index}} (int index)
+\begin{DoxyCompactList}\small\item\em Deletes node at index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classDoublyLinkedList_a640e8c0f2bb78042b75184f757067895}\label{classDoublyLinkedList_a640e8c0f2bb78042b75184f757067895}} 
+void \mbox{\hyperlink{classDoublyLinkedList_a640e8c0f2bb78042b75184f757067895}{print}} ()
+\begin{DoxyCompactList}\small\item\em \{ function\+\_\+description \} \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+This class describes a doubly linked list. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classDoublyLinkedList_ad753f7e35cc2c498fed8324f6c518599}\label{classDoublyLinkedList_ad753f7e35cc2c498fed8324f6c518599}} 
+\index{DoublyLinkedList@{DoublyLinkedList}!addAtHead@{addAtHead}}
+\index{addAtHead@{addAtHead}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtHead()}{addAtHead()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::add\+At\+Head (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an at head. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoublyLinkedList_ab870df73df56d162e4fe8b11af453928}\label{classDoublyLinkedList_ab870df73df56d162e4fe8b11af453928}} 
+\index{DoublyLinkedList@{DoublyLinkedList}!addAtIndex@{addAtIndex}}
+\index{addAtIndex@{addAtIndex}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtIndex()}{addAtIndex()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::add\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an at index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The index \\
+\hline
+\mbox{\texttt{ in}}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoublyLinkedList_a19d3b6c861faebef7c018043abcb6bb9}\label{classDoublyLinkedList_a19d3b6c861faebef7c018043abcb6bb9}} 
+\index{DoublyLinkedList@{DoublyLinkedList}!addAtTail@{addAtTail}}
+\index{addAtTail@{addAtTail}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{addAtTail()}{addAtTail()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::add\+At\+Tail (\begin{DoxyParamCaption}\item[{int}]{val }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Adds an at tail. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & The value \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoublyLinkedList_a41d0d15177dce31b6f77bbe243676558}\label{classDoublyLinkedList_a41d0d15177dce31b6f77bbe243676558}} 
+\index{DoublyLinkedList@{DoublyLinkedList}!deleteAtIndex@{deleteAtIndex}}
+\index{deleteAtIndex@{deleteAtIndex}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{deleteAtIndex()}{deleteAtIndex()}}
+{\footnotesize\ttfamily void Doubly\+Linked\+List\+::delete\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Deletes node at index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The index \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classDoublyLinkedList_a0a87d56752b51f03cf8cec32ede03423}\label{classDoublyLinkedList_a0a87d56752b51f03cf8cec32ede03423}} 
+\index{DoublyLinkedList@{DoublyLinkedList}!getAtIndex@{getAtIndex}}
+\index{getAtIndex@{getAtIndex}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{getAtIndex()}{getAtIndex()}}
+{\footnotesize\ttfamily int Doubly\+Linked\+List\+::get\+At\+Index (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the at index. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em index} & The index\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The at index. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classDoublyLinkedList_ad27208b2c0b53c87dfff7e631a14fb20}\label{classDoublyLinkedList_ad27208b2c0b53c87dfff7e631a14fb20}} 
+\index{DoublyLinkedList@{DoublyLinkedList}!getLength@{getLength}}
+\index{getLength@{getLength}!DoublyLinkedList@{DoublyLinkedList}}
+\doxysubsubsection{\texorpdfstring{getLength()}{getLength()}}
+{\footnotesize\ttfamily int Doubly\+Linked\+List\+::get\+Length (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structDoublyLinkedNode}{Doubly\+Linked\+Node}} $\ast$}]{head }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Gets the length. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em head} & The head\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The length. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maharshi/\+Projects/\+D\+S\+A\+\_\+\+Implementations/\+Class\+Design/headers/Doubly\+Linked\+Class\+Design.\+h\end{DoxyCompactItemize}

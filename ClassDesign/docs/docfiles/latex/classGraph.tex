@@ -1,0 +1,69 @@
+\hypertarget{classGraph}{}\doxysection{Graph$<$ T $>$ Class Template Reference}
+\label{classGraph}\index{Graph$<$ T $>$@{Graph$<$ T $>$}}
+
+
+This class describes a graph.  
+
+
+
+
+{\ttfamily \#include $<$Graph\+Class\+Design.\+h$>$}
+
+
+
+Collaboration diagram for Graph$<$ T $>$\+:
+% FIG 0
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGraph_a4808c14dc2ad8e503b1da71838eaffec}\label{classGraph_a4808c14dc2ad8e503b1da71838eaffec}} 
+{\bfseries Graph} (bool directed=false)
+\item 
+\mbox{\Hypertarget{classGraph_a07956a2e22d57ebed1504e4aacf1732b}\label{classGraph_a07956a2e22d57ebed1504e4aacf1732b}} 
+int {\bfseries add\+Vertex} (T value)
+\item 
+\mbox{\Hypertarget{classGraph_ac1ef986d31fa7aca638b457bb893ae90}\label{classGraph_ac1ef986d31fa7aca638b457bb893ae90}} 
+std\+::pair$<$ int, int $>$ {\bfseries add\+Edge\+And\+Vertices} (T start\+\_\+value, T end\+\_\+value, int cost=0)
+\item 
+\mbox{\Hypertarget{classGraph_a699b67158805a265d2f136e0ebdf5b9f}\label{classGraph_a699b67158805a265d2f136e0ebdf5b9f}} 
+void {\bfseries add\+Edge} (int start\+\_\+id, int end\+\_\+id, int cost=0)
+\item 
+\mbox{\Hypertarget{classGraph_a22fbf7702730ac5cb3d0a30338e0ba70}\label{classGraph_a22fbf7702730ac5cb3d0a30338e0ba70}} 
+int {\bfseries vertex\+Count} () const
+\item 
+\mbox{\Hypertarget{classGraph_ae420cf0281c88f68e53e0cf187d6034b}\label{classGraph_ae420cf0281c88f68e53e0cf187d6034b}} 
+const T \& {\bfseries get\+Vertex\+Data} (int vertex\+\_\+id) const
+\item 
+\mbox{\Hypertarget{classGraph_a16174212510b6b77ea0514c3e7a94425}\label{classGraph_a16174212510b6b77ea0514c3e7a94425}} 
+std\+::vector$<$ int $>$ {\bfseries get\+All\+Vertex\+I\+Ds} () const
+\item 
+\mbox{\Hypertarget{classGraph_acef16c90cf4d81036d583980a82a125e}\label{classGraph_acef16c90cf4d81036d583980a82a125e}} 
+std\+::pair$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$ $>$ {\bfseries Breadth\+First\+Search} (int start\+\_\+id) const
+\item 
+\mbox{\Hypertarget{classGraph_ab8be1c9f0883f1a373ddeb69d53c9a07}\label{classGraph_ab8be1c9f0883f1a373ddeb69d53c9a07}} 
+std\+::vector$<$ int $>$ {\bfseries Depth\+First\+Search} (int start\+\_\+id, bool recursive=false) const
+\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classGraph_a4c809623ef8e79787c562690fda6bfc3}\label{classGraph_a4c809623ef8e79787c562690fda6bfc3}} 
+{\footnotesize template$<$typename U $>$ }\\std\+::ostream \& {\bfseries operator$<$$<$} (std\+::ostream \&out, \mbox{\hyperlink{classGraph}{Graph}}$<$ U $>$ \&g)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\subsubsection*{template$<$typename T$>$\newline
+class Graph$<$ T $>$}
+
+This class describes a graph. 
+
+
+\begin{DoxyTemplParams}{Template Parameters}
+{\em T} & \{ description \} \\
+\hline
+\end{DoxyTemplParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/maharshi/\+Projects/\+D\+S\+A\+\_\+\+Implementations/\+Class\+Design/headers/Graph\+Class\+Design.\+h\end{DoxyCompactItemize}
