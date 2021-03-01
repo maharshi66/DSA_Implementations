@@ -4,6 +4,16 @@
 #include "GraphClassDesign.h"
 #include <iostream>
 
+
+/**
+ * @brief      Adds a vertex.
+ *
+ * @param[in]  value  The value
+ *
+ * @tparam     T      { description }
+ *
+ * @return     { description_of_the_return_value }
+ */
 template <typename T>
 int Graph<T>::addVertex(T value)
 {
@@ -12,6 +22,17 @@ int Graph<T>::addVertex(T value)
     return id;
 }
 
+/**
+ * @brief      Adds edge and vertices.
+ *
+ * @param[in]  start_value  The start value
+ * @param[in]  end_value    The end value
+ * @param[in]  cost         The cost
+ *
+ * @tparam     T            { description }
+ *
+ * @return     { description_of_the_return_value }
+ */
 template <typename T>
 std::pair<int, int> Graph<T>::addEdgeAndVertices(T start_value, T end_value, int cost)
 {
@@ -21,6 +42,16 @@ std::pair<int, int> Graph<T>::addEdgeAndVertices(T start_value, T end_value, int
     return std::pair<int, int> (start_id, end_id);
 }
 
+
+/**
+ * @brief      Adds an edge.
+ *
+ * @param[in]  start_id  The start identifier
+ * @param[in]  end_id    The end identifier
+ * @param[in]  cost      The cost
+ *
+ * @tparam     T         { description }
+ */
 template <typename T>
 void Graph<T>::addEdge(int start_id, int end_id, int cost)
 {
@@ -31,18 +62,44 @@ void Graph<T>::addEdge(int start_id, int end_id, int cost)
         vertices[end_id].addEdge(start_id, cost);
 }
 
+
+/**
+ * @brief      Counts the number of vertices
+ *
+ * @tparam     T     { description }
+ *
+ * @return     { description_of_the_return_value }
+ */
 template <typename T>
 int Graph<T>::vertexCount() const
 {
     return vertices.size();
 }
 
+
+/**
+ * @brief      Gets the vertex data.
+ *
+ * @param[in]  vertex_id  The vertex identifier
+ *
+ * @tparam     T          { description }
+ *
+ * @return     The vertex data.
+ */
 template <typename T>
 const T & Graph<T>::getVertexData(int vertex_id) const
 {
     return vertices[vertex_id].getData();
 }
 
+
+/**
+ * @brief      Gets all vertex i ds.
+ *
+ * @tparam     T     { description }
+ *
+ * @return     All vertex i ds.
+ */
 template <typename T>
 std::vector<int> Graph<T>::getAllVertexIDs() const
 {
@@ -52,7 +109,16 @@ std::vector<int> Graph<T>::getAllVertexIDs() const
     return vertex_ids;
 }
 
-/*template <typename T>
+/**
+ * @brief      Performs BFS
+ *
+ * @param[in]  start_id  The start identifier
+ *
+ * @tparam     T         { description }
+ *
+ * @return     { description_of_the_return_value }
+ */
+template <typename T>
 std::pair<std::vector<int>, std::vector<int>> Graph<T>::BreadthFirstSearch(int start_id) const
 {
     std::vector<int> parent(VertexCount(), -1);
@@ -86,6 +152,16 @@ std::pair<std::vector<int>, std::vector<int>> Graph<T>::BreadthFirstSearch(int s
     return std::make_pair(vertex_ids, parent);
 }
 
+/**
+ * @brief      Performs DFS
+ *
+ * @param[in]  start_id   The start identifier
+ * @param[in]  recursive  The recursive
+ *
+ * @tparam     T          { description }
+ *
+ * @return     { description_of_the_return_value }
+ */
 template <typename T>
 std::vector<int> Graph<T>::DepthFirstSearch(int start_id, bool recursive) const
 {
@@ -122,7 +198,19 @@ std::vector<int> Graph<T>::DepthFirstSearch(int start_id, bool recursive) const
     }
     return visit_order;
 }
-*/
+
+
+
+/**
+ * @brief      Operator overloading for outstream
+ *
+ * @param      out   The out
+ * @param      g     { parameter_description }
+ *
+ * @tparam     T     { description }
+ *
+ * @return     The result of the bitwise left shift
+ */
 template <typename T>
 std::ostream & operator<<(std::ostream & out, Graph<T> & g)
 {
@@ -130,7 +218,16 @@ std::ostream & operator<<(std::ostream & out, Graph<T> & g)
     return out;
 }
 
-/*
+
+/**
+ * @brief      DFS Helper Function
+ *
+ * @param[in]  vertex_id    The vertex identifier
+ * @param      visit_order  The visit order
+ * @param      visited      The visited
+ *
+ * @tparam     T            { description }
+ */
 template <typename T>
 void Graph<T>::DepthFirstSearchRecursive(int vertex_id, std::vector<int> & visit_order, 
         std::vector<bool> & visited) const
@@ -145,8 +242,16 @@ void Graph<T>::DepthFirstSearchRecursive(int vertex_id, std::vector<int> & visit
     }
     // post-order visit would go here
 }
-*/
 
+
+
+/**
+ * @brief      { function_description }
+ *
+ * @param      out   The out
+ *
+ * @tparam     T     { description }
+ */
 template <typename T>
 void Graph<T>::print(std::ostream & out) const
 {
@@ -168,30 +273,67 @@ void Graph<T>::print(std::ostream & out) const
 
 }
 
+
+/**
+ * @brief      Gets the destination id.
+ *
+ * @tparam     T     { description }
+ *
+ * @return     The destination id.
+ */
 template <typename T>
 const int Graph<T>::OutEdge::getDestID() const
 {
     return dest_id;
 }
 
+/**
+ * @brief      Gets the cost.
+ *
+ * @tparam     T     { description }
+ *
+ * @return     The cost.
+ */
 template <typename T>
 const int Graph<T>::OutEdge::getCost() const
 {
     return cost;
 }
 
+/**
+ * @brief      Adds an edge.
+ *
+ * @param[in]  end_id  The end identifier
+ * @param[in]  cost    The cost
+ *
+ * @tparam     T       { description }
+ */
 template <typename T>
 void Graph<T>::Vertex::addEdge(int end_id, int cost)
 {
     outgoing_edges.push_back(OutEdge(end_id, cost));
 }
 
+/**
+ * @brief      Gets the data.
+ *
+ * @tparam     T     { description }
+ *
+ * @return     The data.
+ */
 template <typename T>
 const T & Graph<T>::Vertex::getData() const
 {
     return data;
 }
 
+/**
+ * @brief      Gets the outgoing edges.
+ *
+ * @tparam     T     { description }
+ *
+ * @return     The outgoing edges.
+ */
 template <typename T>
 const std::vector<typename Graph<T>::OutEdge> & Graph<T>::Vertex::getOutgoingEdges() const
 {

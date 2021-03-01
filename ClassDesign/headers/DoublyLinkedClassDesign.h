@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief      Doubly Linked Node Structure
+ */
 struct DoublyLinkedNode{
 	int val;
 
@@ -9,14 +12,27 @@ struct DoublyLinkedNode{
 	DoublyLinkedNode() : val(0), next(nullptr), prev(nullptr) {}
 };
 
+/**
+ * @brief      This class describes a doubly linked list.
+ */
 class DoublyLinkedList{
 	private:
 	DoublyLinkedNode* head;
 	DoublyLinkedNode* tail;
 
 	public:
+	/**
+	 * @brief      Constructs a new instance.
+	 */
 	DoublyLinkedList(): head(nullptr), tail(nullptr) {}
 
+	/**
+	 * @brief      Gets the at index.
+	 *
+	 * @param[in]  index  The index
+	 *
+	 * @return     The at index.
+	 */
 	int getAtIndex(int index){
 		if(index > getLength(head) || index < 0){
 			cout<<"Incorrect index!"<<endl;
@@ -31,6 +47,13 @@ class DoublyLinkedList{
 		return temp->val;
 	}
 
+	/**
+	 * @brief      Gets the length.
+	 *
+	 * @param      head  The head
+	 *
+	 * @return     The length.
+	 */
 	int getLength(DoublyLinkedNode* head){
 		if(!head){
 			return 0;
@@ -45,6 +68,11 @@ class DoublyLinkedList{
 		return count;
 	}
 
+	/**
+	 * @brief      Adds an at head.
+	 *
+	 * @param[in]  val   The value
+	 */
 	void addAtHead(int val){
 		DoublyLinkedNode* newNode = new DoublyLinkedNode();
 		newNode->val = val;
@@ -58,6 +86,11 @@ class DoublyLinkedList{
 		return;
 	}
 
+	/**
+	 * @brief      Adds an at tail.
+	 *
+	 * @param[in]  val   The value
+	 */
 	void addAtTail(int val){
 		DoublyLinkedNode* newNode = new DoublyLinkedNode();
 		newNode->val = val;
@@ -71,6 +104,12 @@ class DoublyLinkedList{
 		return;
 	}
 
+	/**
+	 * @brief      Adds an at index.
+	 *
+	 * @param[in]  index  The index
+	 * @param[in]  val    The value
+	 */
 	void addAtIndex(int index, int val){
 		if(index == 0){
 			addAtHead(val);
@@ -98,6 +137,9 @@ class DoublyLinkedList{
         temp->next = newNode;		
 	}
 
+	/**
+	 * @brief      Deletes node at head
+	 */
 	void deleteAtHead(){
         if(!head){
             return;
@@ -107,6 +149,9 @@ class DoublyLinkedList{
         delete temp;
 	}
 
+	/**
+	 * @brief      Deletes node at tail
+	 */
 	void deleteAtTail(){
         if(!head){
             return ;
@@ -120,6 +165,11 @@ class DoublyLinkedList{
         tail = temp;
 	}
 
+	/**
+	 * @brief      Deletes node at index
+	 *
+	 * @param[in]  index  The index
+	 */
 	void deleteAtIndex(int index){
         if(index >= getLength(head)){
             return;
@@ -143,6 +193,9 @@ class DoublyLinkedList{
         delete temp2;
 	}
 
+	/**
+	 * @brief      { function_description }
+	 */
 	void print(){
         if(head == nullptr){
             return;

@@ -1,6 +1,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * @brief      Node structure
+ */
 struct SinglyLinkedNode{
 	int val;
 	SinglyLinkedNode *next;
@@ -8,13 +11,27 @@ struct SinglyLinkedNode{
 	SinglyLinkedNode(int val) : val(val), next(nullptr) {}
 };
 
+
+/**
+ * @brief      This class describes a singly linked list .
+ */
 class SinglyLinkedList{		
 	public:
 	SinglyLinkedNode *head;
 	SinglyLinkedNode *tail;
 
+	/**
+	 * @brief      Constructs a new instance.
+	 */
 	SinglyLinkedList(): head(nullptr), tail(nullptr) {}
 	
+	/**
+	 * @brief      Gets the length.
+	 *
+	 * @param      head  The head
+	 *
+	 * @return     The length.
+	 */
 	int getLength(SinglyLinkedNode* head){
 		if(!head){
 			return 0;
@@ -29,6 +46,11 @@ class SinglyLinkedList{
 		return count;
 	}
 
+	/**
+	 * @brief      Adds an at head.
+	 *
+	 * @param[in]  val   The value
+	 */
 	void addAtHead(int val){
 		SinglyLinkedNode* newNode = new SinglyLinkedNode();
 		newNode->val = val;
@@ -42,6 +64,11 @@ class SinglyLinkedList{
 		return;
 	}
 
+	/**
+	 * @brief      Adds an at tail.
+	 *
+	 * @param[in]  val   The value
+	 */
 	void addAtTail(int val){
 		SinglyLinkedNode* newNode = new SinglyLinkedNode(val);
 		if(!head){
@@ -56,6 +83,12 @@ class SinglyLinkedList{
 		return;
 	}
 
+	/**
+	 * @brief      Adds an at index.
+	 *
+	 * @param[in]  index  The index
+	 * @param[in]  val    The value
+	 */
 	void addAtIndex(int index, int val){
 		if(index == 0){
 			addAtHead(val);
@@ -82,6 +115,13 @@ class SinglyLinkedList{
         temp->next = newNode;		
 	}
 
+	/**
+	 * @brief      Gets the node at index.
+	 *
+	 * @param[in]  index  The index
+	 *
+	 * @return     The node at index.
+	 */
 	SinglyLinkedNode* getNodeAtIndex(int index){
 		if(!head){
 			return nullptr;
@@ -103,6 +143,9 @@ class SinglyLinkedList{
 		return nullptr;
 	}
 
+    /**
+     * @brief      { function_description }
+     */
     void deleteAtHead(){
         if(head == NULL){
             return;
@@ -112,6 +155,9 @@ class SinglyLinkedList{
         delete temp;
     }
     
+    /**
+     * @brief      { function_description }
+     */
     void deleteAtTail(){
         if(head == NULL){
             return ;
@@ -125,7 +171,10 @@ class SinglyLinkedList{
         tail = temp;
     }
 
-    /** Delete the index-th node in the linked list, if the index is valid. */
+    /** Delete the index-th node in the linked list, if the index is valid.
+     *
+     * @param[in]  index  The index
+     */
     void deleteAtIndex(int index) {
         if(index>= getLength(head)){
             return;
@@ -149,6 +198,11 @@ class SinglyLinkedList{
         delete temp2;
     }
 
+   	/**
+   	 * @brief      Reverses the linked list
+   	 *
+   	 * @return     Reversed List
+   	 */
    	SinglyLinkedNode* reverseList(){
       // Iterative approach  
    	  SinglyLinkedNode *prevNode, *currNode, *nextNode;
@@ -172,6 +226,11 @@ class SinglyLinkedList{
         return head;
    	}
 
+   	/**
+   	 * @brief      Rotates the Linked List
+   	 *
+   	 * @param[in]  k     number of rotations
+   	 */
    	void rotateList(int k){
 		if(!head || k == 0){
 			return;
@@ -198,7 +257,12 @@ class SinglyLinkedList{
 		return;
    	} 
 
-   	//Deep Copy of a Linked List
+
+   	/**
+   	 * @brief      Makes a Deep Copy of the linked list
+   	 *
+   	 * @return     Copied List
+   	 */
    	SinglyLinkedNode* copyList(){
    		if(head == nullptr) return nullptr;
    		SinglyLinkedNode* curr = head;
@@ -223,6 +287,11 @@ class SinglyLinkedList{
    	}
 };
 
+/**
+ * @brief      Prints a list.
+ *
+ * @param      list  The list
+ */
 void printList(SinglyLinkedList* list){
         if(list->head == nullptr){
             return;

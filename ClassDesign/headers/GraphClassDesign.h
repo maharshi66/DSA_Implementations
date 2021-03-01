@@ -2,6 +2,11 @@
 #include <ostream>
 #include <vector>
 
+/**
+ * @brief      This class describes a graph.
+ *
+ * @tparam     T     { description }
+ */
 template <typename T>
 class Graph
 {
@@ -15,8 +20,10 @@ class Graph
         const T & getVertexData(int vertex_id) const;
         std::vector<int> getAllVertexIDs() const;
         // BFS returns vector pair <vertex_id, parent of this vertex>
-/*        std::pair<std::vector<int>, std::vector<int>> BreadthFirstSearch(int start_id) const;
-        std::vector<int> DepthFirstSearch(int start_id, bool recursive = false) const;*/
+        
+        std::pair<std::vector<int>, std::vector<int>> BreadthFirstSearch(int start_id) const;
+        
+        std::vector<int> DepthFirstSearch(int start_id, bool recursive = false) const;
 
         template <typename U>
         friend std::ostream & operator<<(std::ostream & out, Graph<U> & g);
@@ -26,10 +33,20 @@ class Graph
 
         std::vector<Vertex> vertices;
         const bool directed;
-  /*      void DepthFirstSearchRecursive(int vertex_id, std::vector<int> & visit_order,
-                std::vector<bool> & visited) const;*/
+        void DepthFirstSearchRecursive(int vertex_id, std::vector<int> & visit_order,
+                std::vector<bool> & visited) const;
+        
+        /**
+         * @brief      { function_description }
+         *
+         * @param      out   The out
+         */
         void print(std::ostream & out) const;
 
+
+        /**
+         * @brief      This class describes an out edge.
+         */
         class OutEdge
         {
             public:
@@ -42,11 +59,28 @@ class Graph
                 int cost;
         };
 
+
+        /**
+         * @brief      This class describes a vertex.
+         */
         class Vertex
         {
             public:
+                /**
+                 * @brief      Constructs a new instance.
+                 *
+                 * @param[in]  id     The identifier
+                 * @param[in]  value  The value
+                 */
                 Vertex(int id, T value): id(id), data(value) {}
+                
                 void addEdge(int end_id, int cost);
+                
+                /**
+                 * @brief      Gets the data.
+                 *
+                 * @return     The data.
+                 */
                 const T & getData() const;
                 const std::vector<OutEdge> & getOutgoingEdges() const;
 

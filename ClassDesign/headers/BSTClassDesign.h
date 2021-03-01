@@ -2,7 +2,10 @@
 #include <vector>
 
 using namespace std;
-//BST Node
+
+/**
+ * @brief      Binary Tree Node
+ */
 struct TreeNode{
 	int val;
 	TreeNode* left;
@@ -12,8 +15,18 @@ struct TreeNode{
 	TreeNode(int val, TreeNode* left, TreeNode* right): val(val), left(left), right(right) {}
 };
 
+/**
+ * @brief      This class describes a binary search tree.
+ */
 class BinarySearchTree{
 	private:    
+    
+    /**
+     * @brief      Preorder Traversal
+     *
+     * @param      root    The root
+     * @param      result  The result
+     */
     void preOrderTraversal_wrapper(TreeNode* root, vector<int>& result)
     {
         if(root != nullptr)
@@ -32,6 +45,14 @@ class BinarySearchTree{
         }
     }
 
+    /**
+     * @brief      Inserts a node in the Binary Search Tree
+     *
+     * @param      node  The node
+     * @param[in]  val   The value
+     *
+     * @return     Root node
+     */
     TreeNode* insertNode(TreeNode* node, int val){
         
         if(node == nullptr){
@@ -48,6 +69,14 @@ class BinarySearchTree{
         return node;
     }
 
+    /**
+     * @brief      Searches a node in the tree
+     *
+     * @param      node  The node
+     * @param[in]  val   The value
+     *
+     * @return     True or False
+     */
     bool searchNode(TreeNode* node, int val){
         if(node == nullptr) return false;
 
@@ -60,6 +89,14 @@ class BinarySearchTree{
         return false;
     }
 
+    /**
+     * @brief      Deletes a node in the BST
+     *
+     * @param      node  The node
+     * @param[in]  key   The key
+     *
+     * @return     Root node of the tree
+     */
     TreeNode* deleteNode(TreeNode* node, int key){
         if(node == nullptr){
             return nullptr;
@@ -115,15 +152,35 @@ class BinarySearchTree{
     }
 
     //BST Insert, Search, Delete by key
+    
+    /**
+     * @brief      Insert Key
+     *
+     * @param[in]  key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     TreeNode* insertKey(int key){
         return insertNode(this->root, key);
     }
 
+    /**
+     * @brief      Search key
+     *
+     * @param[in]  key   The key
+     *
+     * @return     { description_of_the_return_value }
+     */
     bool searchKey(int key){
         return searchNode(this->root, key);
     } 	
 		
-	void deleteKey(int key){
+	/**
+     * @brief   Delete key 
+     *
+     * @param[in]  key   The key
+     */
+    void deleteKey(int key){
         if(searchKey(key)){
             deleteNode(this->root, key);        
         }else{
@@ -133,6 +190,12 @@ class BinarySearchTree{
     }
     
     //Traversal methods
+    
+    /**
+     * @brief      Preorder Traversal
+     *
+     * @return     Vector
+     */
     vector<int> preOrderTraversal() {
         vector<int> resultVector;
         preOrderTraversal_wrapper(this->root, resultVector);

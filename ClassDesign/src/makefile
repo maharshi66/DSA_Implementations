@@ -1,4 +1,5 @@
 IDIR =../headers
+DOCSDIR = ../docs
 CC=gcc
 CPP=g++
 CFLAGS=-I$(IDIR)
@@ -26,6 +27,9 @@ $(ODIR)/%.o: %.cpp $(DEPS)
 
 datastructure: $(OBJ)
 	$(CPP) -o $@ $^ $(CFLAGS) $(LIBS)
+
+documentation:
+	doxygen $(DOCSDIR)/docs.conf
 
 .PHONY: clean
 
